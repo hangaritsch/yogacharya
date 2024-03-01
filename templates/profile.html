@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}
+Profile
+{% endblock title %}
+{% block body %}
+
+
+
+
+<div class="container">
+
+    <div class="row">
+    
+    <div class="col-md-4">
+      
+    <h1>Enrollment Details</h1>
+    {% comment %} Contact Us COde  {% endcomment %}
+    {% for post in posts %}
+    
+   
+    <ul class="list-group">
+        <li class="list-group-item bg-warning text-dark"><h5>Name : {{post.FullName}}</h5></li>
+        <li class="list-group-item bg-warning text-dark"><h5>Email : {{post.Email}}</h5></li>
+        <li class="list-group-item bg-warning text-dark"><h5>Gender : {{post.Gender}}</h5></li>
+        <li class="list-group-item bg-warning text-dark"><h5>PhoneNumber : {{post.PhoneNumber}}</h5></li>
+        <li class="list-group-item bg-warning text-dark"><h5>DOB : {{post.DOB}}</h5></li>
+        <li class="list-group-item bg-warning text-dark"><h5>Membership plan : {{post.SelectMembershipPlan}}</h5></li>
+        <li class="list-group-item bg-warning text-dark"><h5>Reference : {{post.Reference}}</h5></li>
+        <li class="list-group-item bg-warning text-dark"><h5>Payment Status : {{post.paymentStatus}}</h5></li>
+        <li class="list-group-item bg-warning text-dark"><h5>Amount Paid : {{post.Price}}</h5></li>
+        <li class="list-group-item bg-warning text-dark"><h5>Upcoming Due Date : {{post.DueDate}}</h5></li>
+        <li class="list-group-item bg-warning text-dark"><h5>Joining date : {{post.timeStamp}}</h5></li>
+      
+       
+      </ul>
+      {% endfor %}
+    
+    
+    
+    
+    </div>
+    
+    <div class="col-md-8">
+{% endblock body %}      
